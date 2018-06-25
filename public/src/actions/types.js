@@ -9,6 +9,7 @@ export const CREATE_CUSTOMER = 'create_customer';
 export const SELECT_INVOICE_CUSTOMER = 'select_invoice_customer';
 
 export const FETCH_PRODUCTS = 'fetch_products';
+export const CREATE_PRODUCT = 'create_product';
 export const SET_PRODUCT = 'set_product';
 
 export const ADD_INVOICE_ITEM = 'add_invoice_item';

@@ -22,6 +22,7 @@ class ProductList extends Component {
   render() {
     return (
       <div>
+          <Link to="/product/create" className="btn btn-primary">Add Product</Link>
         <table className="product-list table table-striped">
           <thead>
             <tr>

@@ -2,16 +2,17 @@ import axios from 'axios';
 import { browserHistory } from 'react-router';
 
 import {
-  FETCH_INVOICES,
-  ADD_INVOICE,
-  UPDATE_INVOICE,
-  ADD_INVOICE_ITEM,
-  FETCH_CUSTOMERS,
-  SELECT_CUSTOMER,
-  CREATE_CUSTOMER,
-  SELECT_INVOICE_CUSTOMER,
-  FETCH_PRODUCTS,
-  SET_PRODUCT
+    FETCH_INVOICES,
+    ADD_INVOICE,
+    UPDATE_INVOICE,
+    ADD_INVOICE_ITEM,
+    FETCH_CUSTOMERS,
+    SELECT_CUSTOMER,
+    CREATE_CUSTOMER,
+    SELECT_INVOICE_CUSTOMER,
+    FETCH_PRODUCTS,
+    SET_PRODUCT,
+    CREATE_PRODUCT
 } from './types';
 
 const ROOT_URL = 'http://localhost:80/api/';
@@ -104,6 +105,21 @@ export function createCustomer(data) {
     payload: request
   };
 }
+
+export function createProduct(data) {
+    console.log('createProduct', data);
+    const request = axios({
+        method: 'post',
+        url: `${ROOT_URL}products`,
+        data: data
+    });
+    
+    return {
+        type: CREATE_PRODUCT,
+        payload: request
+    };
+}
+
 
 export function fetchProducts() {
   const request = axios({

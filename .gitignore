@@ -2,3 +2,4 @@ node_modules
 invoices.sqlite
 public/bundle.js
 .idea
+package-lock.json

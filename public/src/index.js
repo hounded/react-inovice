@@ -8,12 +8,14 @@ import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import App from './components/app/app';
 import Customers from './pages/customers';
 import Products from './pages/products';
+import CreateProductP from "./pages/create_product";
 import Invoices from './pages/invoices';
 import SelectInvoiceCustomer from './pages/set_invoice_customer';
 import CreateInvoiceCustomer from './pages/create_invoice_customer';
 import AddInvoiceItems from './pages/add_invoice';
 
 import reducers from './reducers';
+
 
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 
@@ -25,6 +27,7 @@ ReactDOM.render(
         <Route path="invoices" component={Invoices}></Route>
         <Route path="customers" component={Customers}></Route>
         <Route path="products" component={Products}></Route>
+        <Route path="product/create" component={CreateProductP}></Route>
         <Route path="add-invoice/select-customer" component={SelectInvoiceCustomer}></Route>
         <Route path="add-invoice/create-customer" component={CreateInvoiceCustomer}></Route>
         <Route path="add-invoice/items" component={AddInvoiceItems}></Route>
