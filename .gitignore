@@ -1,4 +1,4 @@
 node_modules
 invoices.sqlite
 public/bundle.js
-.idea/
+.idea
